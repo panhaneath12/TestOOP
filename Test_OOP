@@ -1,0 +1,61 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+    class Employee
+    {
+        public:
+            string Name;
+            string Address;
+            string Birth;
+            int ID;
+            float Salary;
+            Employee() {
+                Name = "Unknow";
+                Address = "Unkow";
+                ID = 0;
+                Salary = 0.00;
+                Birth = "Unknow";
+            }
+          // Employee() {
+                //cout << "Data has been Deleted.";
+           // }
+           void addEmployee()
+           {
+               //cin.ignore();
+               cout << "Input your Name: ";
+               getline(cin,Name);
+               cout << "Input your ID: ";
+               cin >> ID;
+               cin.ignore();
+               cout << "Input your Birth: ";
+               getline(cin, Birth);
+               //cin.ignore();
+               cout << "Input your Address: ";
+               getline(cin,Address);
+               cout << "Input your salary: ";
+               cin >> Salary;
+
+           }
+           void viewEmployee()
+           {
+               cout << "\t\t\tDisply Information\t\t\t\n";
+               cout << "  Name: " << Name<<endl;
+               cout << "  ID: " << ID << endl;
+               cout << "  Birth Date: " << Birth << endl;
+               cout << "  Address: " << Address << endl;
+               cout << "  Salary:  " << Salary << endl;
+
+           }
+
+
+
+    };
+    int main()
+    {
+        Employee employee;
+        employee.addEmployee();
+        employee.viewEmployee();
+    }
+
+
